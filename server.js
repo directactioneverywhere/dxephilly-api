@@ -15,6 +15,12 @@ const PORT = process.env.PORT || 3000
 
 var app = express()
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+  next()
+})
+
 function get_events(callback) {
   request(
     `https://graph.facebook.com/v2.6/dxephilly?fields=events&access_token=${FACEBOOK_ACCESS_TOKEN}`,
