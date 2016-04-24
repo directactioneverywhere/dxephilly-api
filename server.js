@@ -2,13 +2,22 @@ const express = require('express')
 const fs = require('fs')
 const request = require('request')
 
-var app = express()
-const facebook_access_token = encodeURIComponent(fs.readFileSync('facebook_access_token', 'utf8').trim())
+function get_facebook_access_token() {
+  var token = process.env.FACEBOOK_ACCESS_TOKEN
+  if (!token) {
+    token = fs.readFileSync('facebook_access_token', 'utf8').trim()
+  }
+  return encodeURIComponent(token)
+}
 
+const FACEBOOK_ACCESS_TOKEN = get_facebook_access_token()
+const PORT = process.env.PORT || 3000
+
+var app = express()
 
 function get_events(callback) {
   request(
-    `https://graph.facebook.com/v2.6/dxephilly?fields=events&access_token=${facebook_access_token}`,
+    `https://graph.facebook.com/v2.6/dxephilly?fields=events&access_token=${FACEBOOK_ACCESS_TOKEN}`,
     function(error, response, body) {
       if (!error && response.statusCode == 200) {
         callback(JSON.parse(body).events.data)
@@ -67,5 +76,5 @@ app.get('/facebook/events/upcoming/next', function(req, res) {
 })
 
 
-app.listen(3000)
-console.log('Listening on port 3000...')
+app.listen(PORT)
+console.log(`Listening on port ${PORT}...`)
