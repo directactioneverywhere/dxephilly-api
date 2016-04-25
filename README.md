@@ -16,7 +16,7 @@ Deployment
 ----------
 If you have Dokku access to the server, you can add the remote.
 
-    git remote add dokku dokku@dxephilly.org:api.dxephilly.org
+    git remote add dokku dokku@dxephilly.org:api
 
 Then push it to that remote to deploy.
 
