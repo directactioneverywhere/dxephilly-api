@@ -21,3 +21,7 @@ If you have Dokku access to the server, you can add the remote.
 Then push it to that remote to deploy.
 
     git push dokku master
+
+License
+-------
+Copyright © 2016 DxE Tech Working Group and licensed under the GNU General Public License v3.0. See the LICENSE file for the complete license.
