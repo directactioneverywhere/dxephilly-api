@@ -2,16 +2,14 @@ const express = require('express')
 const fs = require('fs')
 const request = require('request')
 
-function get_facebook_access_token() {
-  var token = process.env.FACEBOOK_ACCESS_TOKEN
-  if (!token) {
-    token = fs.readFileSync('facebook_access_token', 'utf8').trim()
-  }
-  return encodeURIComponent(token)
+try {
+  var env = require('./env.js')
+} catch(e) {
+  var env = process.env
 }
 
-const FACEBOOK_ACCESS_TOKEN = get_facebook_access_token()
-const PORT = process.env.PORT || 3000
+const FACEBOOK_ACCESS_TOKEN = env.FACEBOOK_ACCESS_TOKEN
+const PORT = env.PORT || 3000
 
 var app = express()
 
