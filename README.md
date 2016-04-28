@@ -10,7 +10,7 @@ You can query:
 
 That's it for now.
 
-Note that you need to drop in a file called `facebook_access_token` in the project directory in order to run this locally. Any access token will do, as this information is all public.
+Note that this app depends on the presence of a `FACEBOOK_ACCESS_TOKEN` environment variable. You can add this to Dokku during deployment, or use a file called `env.js` during local development. See `env.example.js`.
 
 Deployment
 ----------
