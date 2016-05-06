@@ -24,4 +24,4 @@ Then push it to that remote to deploy.
 
 License
 -------
-Copyright © 2016 DxE Tech Working Group and licensed under the GNU General Public License v3.0. See the LICENSE file for the complete license.
+Licensed under the GNU General Public License v3.0. See the LICENSE file for the complete license.
