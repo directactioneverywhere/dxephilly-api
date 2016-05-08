@@ -12,16 +12,16 @@ That's it for now.
 
 Note that this app depends on the presence of a `FACEBOOK_ACCESS_TOKEN` environment variable. You can add this to Dokku during deployment, or use a file called `env.js` during local development. See `env.example.js`.
 
+Local Development
+-----------------
+WIP
+
 Deployment
 ----------
-If you have Dokku access to the server, you can add the remote.
+This app is deployed with Dokku. [Learn about](https://github.com/directactioneverywhere/dxe-learn2dokku) how DxE Tech deploys with Dokku. The Dokku git remote is:
 
-    git remote add dokku dokku@dxephilly.org:api
-
-Then push it to that remote to deploy.
-
-    git push dokku master
+    dokku@dxephilly.org:api
 
 License
--------
-Licensed under the GNU General Public License v3.0. See the LICENSE file for the complete license.
+=======
+dxephilly-api is licensed under GNU GPL version 3.0. For the full license see the LICENSE file.
