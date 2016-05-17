@@ -20,7 +20,7 @@ Deployment
 ----------
 This app is deployed with Dokku. [Learn about](https://github.com/directactioneverywhere/dxe-learn2dokku) how DxE Tech deploys with Dokku. The Dokku git remote is:
 
-    dokku@dxephilly.org:api
+    dokku@dxephilly.org:api.dxephilly.org
 
 License
 =======
