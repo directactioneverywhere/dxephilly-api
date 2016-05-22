@@ -9,7 +9,9 @@
   "author": "DxE Tech Working Group",
   "license": "GPL-3.0",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "stripe": "^4.6.0"
   }
 }

@@ -1,2 +1,3 @@
 node_modules/
 lib/env.js
+npm-debug.log
